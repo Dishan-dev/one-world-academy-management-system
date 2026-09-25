@@ -1,33 +1,112 @@
 # One World Academy Management System
 
-A Windows Forms desktop application developed in C# for managing students, lecturers and courses at an educational institute.
+A desktop-based institute management system developed using **C# Windows Forms**, **.NET Framework**, **SQL Server**, and **ADO.NET**.
 
-## Tech Stack
-- C# / Windows Forms
-- .NET Framework 4.7.2
-- SQL Server / ADO.NET
-- Krypton Toolkit UI components
+The application provides a simple administrative interface for managing students, lecturers, courses, and related academic records.
 
-## Main Features
-- Admin login
-- Student registration, update, delete and search
-- Lecturer registration and search
-- Course creation and update
-- Dashboard-based navigation
+---
 
-## Setup
-1. Open `fp.sln` using Visual Studio 2022 with **.NET desktop development** installed.
-2. Ensure SQL Server Express is available as `.\SQLEXPRESS`.
-3. Create/restore a database named `OneWorldAcademy` with the tables required by the application.
-4. Build and run the solution.
+## Overview
 
-> Note: The original database backup/schema was not included in the source archive, so a compatible `OneWorldAcademy` database is required for full runtime functionality.
+The **One World Academy Management System** was developed as a desktop application to simplify common administrative tasks within an educational institute.
 
-## Maintenance fixes in this repository
-- Made the SQL Server connection configurable through application settings instead of hard-coded form-level server names.
-- Corrected course insert/update SQL issues.
-- Corrected lecturer search queries to use `Lecture_table`.
-- Fixed course-grid field mapping.
-- Moved student deletion confirmation before the delete operation.
-- Parameterized several insert/delete queries to reduce SQL errors and injection risk.
-- Updated the Krypton Toolkit reference to a repository-relative path.
+The system provides an admin dashboard with functionality for:
+
+- Student registration and management
+- Lecturer management
+- Course management
+- Searching and filtering records
+- Updating existing records
+- Deleting records
+- Database-driven data management
+- User authentication
+
+---
+
+## Features
+
+### Authentication
+
+- Admin login interface
+- Username and password validation
+- Show / hide password functionality
+- Login error handling
+- Logout functionality
+
+### Student Management
+
+- Register new students
+- View registered students
+- Update student information
+- Delete student records
+- Search and filter students
+- Automatically retrieve student information using registration numbers
+
+### Lecturer Management
+
+- Register lecturers
+- View lecturer records
+- Search and filter lecturers
+- Update lecturer information
+- Delete lecturer records
+
+### Course Management
+
+- Add new courses
+- View available courses
+- Edit course information
+- Remove courses
+- Display updated course information in the interface
+
+### Dashboard
+
+- Central administration dashboard
+- Student overview
+- Lecturer management access
+- Course management access
+- Search and filtering functionality
+
+---
+
+## Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| C# | Application development |
+| Windows Forms | Desktop user interface |
+| .NET Framework 4.7.2 | Application framework |
+| SQL Server | Database management |
+| ADO.NET | Database connectivity |
+| Visual Studio | Development environment |
+| Krypton Toolkit | UI components |
+
+---
+
+## Application Structure
+
+```text
+OneWorldAcademy/
+│
+├── fp.sln
+├── fp.csproj
+├── App.config
+├── Program.cs
+│
+├── Form1.cs
+├── Form1.Designer.cs
+├── Form1.resx
+│
+├── Form2.cs
+├── Form2.Designer.cs
+├── Form2.resx
+│
+├── Form3.cs
+├── Form4.cs
+├── Form5.cs
+├── Form6.cs
+│
+├── Properties/
+├── Resources/
+│
+├── README.md
+└── .gitignore
